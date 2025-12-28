@@ -1,0 +1,11 @@
+.sb-root {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.sb-input {
+	flex: 1;
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+}

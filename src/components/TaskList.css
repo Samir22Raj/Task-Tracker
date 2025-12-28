@@ -1,0 +1,10 @@
+.tl-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.tl-empty, .tl-loading{
+  padding:20px;
+  text-align:center;
+  color:#444;
+}

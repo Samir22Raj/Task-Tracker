@@ -1,0 +1,27 @@
+.tm-backdrop {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.35);
+}
+.tm-modal {
+	background: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	min-width: 320px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.tm-modal input, .tm-modal textarea, .tm-modal select {
+	padding: 8px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+}
+.tm-actions {
+	display: flex;
+	gap: 8px;
+	justify-content: flex-end;
+}

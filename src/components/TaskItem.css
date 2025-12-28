@@ -1,0 +1,25 @@
+.ti-card {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+.ti-title {
+	font-weight: 600;
+}
+.ti-desc {
+	font-size: 0.9rem;
+	color: #666;
+}
+.ti-actions {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.ti-actions select {
+	padding: 6px;
+	border-radius: 6px;
+}

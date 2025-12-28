@@ -1,0 +1,28 @@
+
+> task-tracker@0.1.0 build
+> react-scripts build
+
+(node:10096) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  63.3 kB  build\static\js\main.689c3ebf.js
+  1.76 kB  build\static\js\453.771c3bc6.chunk.js
+  1.14 kB  build\static\css\main.a20ce33e.css
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  https://cra.link/deployment
+

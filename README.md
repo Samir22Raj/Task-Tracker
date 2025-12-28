@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Task Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Lightweight Task Tracker built with React (hooks only). It provides task listing, add/edit/delete, search with debounce, filter by status, and sorting. Data is persisted locally using a small mock API that stores tasks in `localStorage`.
 
-## Available Scripts
+## Quick Start
 
-In the project directory, you can run:
+Install dependencies:
 
-### `npm start`
+```bash
+npm ci
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Run development server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm start
+```
 
-### `npm test`
+Build production bundle:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run build
+```
 
-### `npm run build`
+Serve production build locally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npx serve -s build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure (important files)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `src/App.js` — main app container
+- `src/api/mockApi.js` — localStorage-backed mock API for persistence
+- `src/hooks/useTasks.js` — task state management and CRUD
+- `src/hooks/useDebounce.js` — debounce utility for search
+- `src/hooks/useSort.js` — sorting helper
+- `src/components/` — presentational components (`TaskList`, `TaskItem`, `TaskModal`, `FilterBar`, `SearchBar`)
+- `public/index.html` — page template (title & meta updated)
 
-### `npm run eject`
+## Notes
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- This project uses plain CSS (no Tailwind) and a simple PostCSS/autoprefixer setup.
+- If you encounter build errors mentioning Tailwind/PostCSS, run `npm ci` then ensure `postcss.config.js` has only autoprefixer configured.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you'd like, I can run a production build and serve the output here (or guide you through running it locally). Paste any `build.log` contents if a build fails and I'll diagnose the errors.
